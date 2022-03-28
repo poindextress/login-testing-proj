@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     private let tempDatabase = [User(email: "shury@thatsme.com", password: "avocadoGood")]
     
     @IBAction func didTapLoginButton() {
-        
         do {
             guard
                 let email = emailTextField.text,
@@ -29,7 +28,7 @@ class ViewController: UIViewController {
             if let user = tempDatabase.first(where: { user in
                 user.password == password && user.email == email
             }) {
-                presentAlert(with: "You successfully logged in as \(user.email)")
+                presentAlert(with: "You have successfully logged in as \(user.email)")
             } else {
                 throw ValidationError.invalidCredentials
             }
