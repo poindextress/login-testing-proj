@@ -14,17 +14,23 @@ class ViewController: UIViewController {
     
     private let tempDatabase = [User(email: "shury@thatsme.com", password: "avocadoGood")]
     
+    private let validation: ValidationService
+    
+    init(validation: ValidationService) {
+        self.validation = validation
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.validation = ValidationService()
+        super.init(coder: coder)
+    }
+    
     @IBAction func didTapLoginButton() {
         do {
-            guard
-                let email = emailTextField.text,
-                let password = passwordTextField.text
-                else { throw ValidationError.invalidCredentials }
-
-            guard checkIfValidEmail(input: email) else { throw ValidationError.emailFormatBad }
-            guard password.count > 6 else { throw ValidationError.passwordTooShort }
-            guard password.count < 20 else { throw ValidationError.passwordTooLong }
-
+            let email = try validation.validateEmail(emailTextField.text)
+            let password = try validation.validatePassword(passwordTextField.text)
+            
             if let user = tempDatabase.first(where: { user in
                 user.password == password && user.email == email
             }) {
@@ -39,6 +45,32 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    
+    struct ValidationService {
+        func validateEmail(_ email: String?) throws -> String {
+            guard let email = email else { throw ValidationError.invalidCredentials }
+            guard checkIfValidEmail(input: email) else { throw ValidationError.emailFormatBad }
+            return email
+        }
+        
+        func validatePassword(_ password: String?) throws -> String {
+            guard let password = password else { throw ValidationError.invalidCredentials }
+            guard password.count >= 6 else { throw ValidationError.passwordTooShort }
+            guard password.count <= 20 else { throw ValidationError.passwordTooLong }
+            return password
+        }
+        
+        func checkIfValidEmail(input: String) -> Bool {
+            let range = NSRange(location: 0, length: input.utf16.count)
+            let pattern = #"^[A-Za-z0-9]+([\.\-_][A-Za-z0-9]+)*@[A-Za-z0-9]+([\.\-_][A-Za-z0-9]+)*\.[A-Za-z][A-Za-z]+$"#
+            let regex = try! NSRegularExpression(pattern: pattern, options: [])
+            if regex.firstMatch(in: input, options: [], range: range) != nil {
+                return true
+            }
+            return false
+        }
+    }
+    
     enum ValidationError: LocalizedError {
         case invalidCredentials
         case emailFormatBad
@@ -57,16 +89,6 @@ extension ViewController {
                 return "Your password cannot be more than 20 characters."
             }
         }
-    }
-    
-    func checkIfValidEmail(input: String) -> Bool {
-        let range = NSRange(location: 0, length: input.utf16.count)
-        let pattern = #"^[A-Za-z0-9]+([\.\-_][A-Za-z0-9]+)*@[A-Za-z0-9]+([\.\-_][A-Za-z0-9]+)*\.[A-Za-z][A-Za-z]+$"#
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        if regex.firstMatch(in: input, options: [], range: range) != nil {
-            return true
-        }
-        return false
     }
 }
 
