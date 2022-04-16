@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  login-testing-proj
 //
 //  Created by Ashlei Mitchell on 3/23/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -35,6 +35,14 @@ class ViewController: UIViewController {
                 user.password == password && user.email == email
             }) {
                 presentAlert(with: "You have successfully logged in as \(user.email)")
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+
+                    // This is to get the SceneDelegate object from your view controller
+                    // then call the change root view controller function to change to main tab bar
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                
             } else {
                 throw ValidationError.invalidCredentials
             }
@@ -44,7 +52,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension LoginViewController {
     
     struct ValidationService {
         func validateEmail(_ email: String?) throws -> String {
