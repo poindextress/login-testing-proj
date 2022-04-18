@@ -172,7 +172,7 @@
         <!--Register View Controller-->
         <scene sceneID="fuo-vA-ReU">
             <objects>
-                <viewController id="KTM-T7-5Fg" userLabel="Register View Controller" sceneMemberID="viewController">
+                <viewController id="KTM-T7-5Fg" userLabel="Register View Controller" customClass="RegisterViewController" customModule="login_testing_proj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZNt-CG-Sl8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +216,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didTapLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Mq-Xw-1Aw"/>
+                                            <action selector="didTapRegisterButton" destination="KTM-T7-5Fg" eventType="touchUpInside" id="KcQ-xS-Lfb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -235,6 +235,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iq3-Be-T7k"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="9NY-Tj-nud" id="IN1-gb-28B"/>
+                        <outlet property="passwordTextField" destination="ROV-bp-jpC" id="ro9-jd-rMU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wn-4B-Lzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

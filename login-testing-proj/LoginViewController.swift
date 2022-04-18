@@ -12,8 +12,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private let tempDatabase = [User(email: "shury@thatsme.com", password: "avocadoGood")]
-    
     private let validation: ValidationService
     
     init(validation: ValidationService) {
@@ -28,10 +26,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLoginButton() {
         do {
+            print(users)
             let email = try validation.validateEmail(emailTextField.text)
             let password = try validation.validatePassword(passwordTextField.text)
             
-            if let user = tempDatabase.first(where: { user in
+            if users.contains(where: { user in
                 user.password == password && user.email == email
             }) {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -40,7 +39,7 @@ class LoginViewController: UIViewController {
                 // This is to get the SceneDelegate object from your view controller
                 // then call the change root view controller function to change to main tab bar
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
-                mainTabBarController.presentAlert(with: "You have successfully logged in as \(user.email)")
+                mainTabBarController.presentAlert(with: "You have successfully logged in as \(email)")
             } else {
                 throw ValidationError.invalidCredentials
             }
