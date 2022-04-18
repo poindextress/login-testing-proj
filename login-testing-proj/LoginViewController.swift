@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLoginButton() {
         do {
-            print(users)
             let email = try validation.validateEmail(emailTextField.text)
             let password = try validation.validatePassword(passwordTextField.text)
             
