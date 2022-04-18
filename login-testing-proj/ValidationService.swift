@@ -8,6 +8,7 @@
 import Foundation
 
 struct ValidationService {
+    
     func validateEmail(_ email: String?) throws -> String {
         guard let email = email else { throw ValidationError.invalidCredentials }
         guard checkIfValidEmail(input: email) else { throw ValidationError.emailFormatBad }
@@ -33,12 +34,14 @@ struct ValidationService {
 }
 
 enum ValidationError: LocalizedError {
+    
     case invalidCredentials
     case emailFormatBad
     case passwordTooShort
     case passwordTooLong
     
     var errorDescription: String? {
+        
         switch self {
         case .invalidCredentials:
             return "You have entered invalid credentials."
