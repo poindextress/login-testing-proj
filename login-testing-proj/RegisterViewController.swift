@@ -30,6 +30,11 @@ class RegisterViewController: UIViewController {
             let password = try validation.validatePassword(passwordTextField.text)
             
             users.append(User(email: email, password: password))
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
+            loginNavController.presentAlert(with: "Successful registration as \(email)!")
         } catch {
             presentAlert(with: error.localizedDescription)
         }
