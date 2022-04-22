@@ -8,3 +8,9 @@
 import Foundation
 
 var users = [User(email: "shury@thatsme.com", password: "avocadoGood")]
+
+var messages = [
+                Message(sender: "recruiter@thatsyou.com", subject: "Welcome!", body: "hi!"),
+                Message(sender: "spammer@thatsyou.com", subject: "SPAAAAAMMM", body: "blah blahh"),
+                Message(sender: "xXtricksterXx@thatsyou.com", subject: "one cool trick to stop getting e-mails", body: "just kidding")
+                ]

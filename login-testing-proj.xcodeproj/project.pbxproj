@@ -12,7 +12,9 @@
 		236F6FA6280CF26C00989471 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6FA5280CF26C00989471 /* RegisterViewController.swift */; };
 		236F6FA8280CF50200989471 /* DummyDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6FA7280CF50200989471 /* DummyDatabase.swift */; };
 		236F6FAA280D00D000989471 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6FA9280D00D000989471 /* UIViewControllerExtensions.swift */; };
+		236F6FAC280D047C00989471 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6FAB280D047C00989471 /* Message.swift */; };
 		237E614F27EFB3D500C3F145 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E614E27EFB3D500C3F145 /* User.swift */; };
+		238CFA902813215200050055 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238CFA8F2813215200050055 /* InboxViewController.swift */; };
 		23E1E3DA27EB81E000BEDFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E3D927EB81E000BEDFF2 /* AppDelegate.swift */; };
 		23E1E3DC27EB81E000BEDFF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E3DB27EB81E000BEDFF2 /* SceneDelegate.swift */; };
 		23E1E3E127EB81E000BEDFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E1E3DF27EB81E000BEDFF2 /* Main.storyboard */; };
@@ -26,7 +28,9 @@
 		236F6FA5280CF26C00989471 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		236F6FA7280CF50200989471 /* DummyDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDatabase.swift; sourceTree = "<group>"; };
 		236F6FA9280D00D000989471 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		236F6FAB280D047C00989471 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		237E614E27EFB3D500C3F145 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		238CFA8F2813215200050055 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		23E1E3D627EB81E000BEDFF2 /* login-testing-proj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login-testing-proj.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E1E3D927EB81E000BEDFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E1E3DB27EB81E000BEDFF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,11 +76,13 @@
 				23E1E3E727EB81E000BEDFF2 /* Info.plist */,
 				23E1E3E427EB81E000BEDFF2 /* LaunchScreen.storyboard */,
 				236F6F9F280A641600989471 /* LoginViewController.swift */,
+				238CFA8F2813215200050055 /* InboxViewController.swift */,
 				236F6FA9280D00D000989471 /* UIViewControllerExtensions.swift */,
 				23E1E3DF27EB81E000BEDFF2 /* Main.storyboard */,
 				236F6FA5280CF26C00989471 /* RegisterViewController.swift */,
 				23E1E3DB27EB81E000BEDFF2 /* SceneDelegate.swift */,
 				237E614E27EFB3D500C3F145 /* User.swift */,
+				236F6FAB280D047C00989471 /* Message.swift */,
 				236F6FA3280CF18600989471 /* ValidationService.swift */,
 			);
 			path = "login-testing-proj";
@@ -156,7 +162,9 @@
 				236F6FAA280D00D000989471 /* UIViewControllerExtensions.swift in Sources */,
 				236F6FA8280CF50200989471 /* DummyDatabase.swift in Sources */,
 				236F6FA0280A641600989471 /* LoginViewController.swift in Sources */,
+				236F6FAC280D047C00989471 /* Message.swift in Sources */,
 				236F6FA4280CF18600989471 /* ValidationService.swift in Sources */,
+				238CFA902813215200050055 /* InboxViewController.swift in Sources */,
 				237E614F27EFB3D500C3F145 /* User.swift in Sources */,
 				236F6FA6280CF26C00989471 /* RegisterViewController.swift in Sources */,
 				23E1E3DA27EB81E000BEDFF2 /* AppDelegate.swift in Sources */,
