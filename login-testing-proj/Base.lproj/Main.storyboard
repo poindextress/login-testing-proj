@@ -127,9 +127,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="opY-xj-nEQ">
-                                <rect key="frame" x="0.0" y="162" width="390" height="468"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="opY-xj-nEQ">
+                                <rect key="frame" x="0.0" y="144" width="390" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1Iz-Z5-uYF" id="czS-gx-LrA"/>
@@ -138,6 +137,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MbW-gz-1re"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="opY-xj-nEQ" firstAttribute="top" secondItem="MbW-gz-1re" secondAttribute="top" constant="100" id="LHG-kI-KaF"/>
+                            <constraint firstItem="opY-xj-nEQ" firstAttribute="centerX" secondItem="MbW-gz-1re" secondAttribute="centerX" id="UtR-1a-lJ7"/>
+                            <constraint firstItem="opY-xj-nEQ" firstAttribute="leading" secondItem="MbW-gz-1re" secondAttribute="leading" id="goT-Jh-rjW"/>
+                            <constraint firstItem="opY-xj-nEQ" firstAttribute="bottom" secondItem="MbW-gz-1re" secondAttribute="bottom" id="p0F-Ks-MwA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Inbox" id="i7w-SO-kxy" userLabel="Inbox"/>
                 </viewController>
