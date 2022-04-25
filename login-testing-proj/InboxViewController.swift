@@ -7,24 +7,31 @@
 
 import UIKit
 
-class InboxViewController: UIViewController, UITableViewDataSource {
+class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet var tableView: UITableView!
     
-    let collectionOfMessages = messages
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let nib = UINib(nibName: "viewTableCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "cell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collectionOfMessages.count
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
         
-        let(message) = collectionOfMessages [indexPath.row]
+        let cell:TableCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableCell
         
-        cell.textLabel?.text = message.subject
+        let message = messages[indexPath.row]
+        
+        cell.labelSender.text = message.sender
+        cell.labelSubject.text = message.subject
+        cell.labelBody.text = message.body
+        
         return cell
     }
 }
