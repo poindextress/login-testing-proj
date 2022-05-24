@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2302890728163B39004DF13D /* viewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2302890628163B39004DF13D /* viewTableCell.xib */; };
-		2302890928163BFE004DF13D /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302890828163BFE004DF13D /* TableCell.swift */; };
+		2302890928163BFE004DF13D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302890828163BFE004DF13D /* TableViewCell.swift */; };
 		236F6FA0280A641600989471 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6F9F280A641600989471 /* LoginViewController.swift */; };
 		236F6FA4280CF18600989471 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6FA3280CF18600989471 /* ValidationService.swift */; };
 		236F6FA6280CF26C00989471 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6FA5280CF26C00989471 /* RegisterViewController.swift */; };
@@ -25,8 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2302890628163B39004DF13D /* viewTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = viewTableCell.xib; sourceTree = "<group>"; };
-		2302890828163BFE004DF13D /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		2302890828163BFE004DF13D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		236F6F9F280A641600989471 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		236F6FA3280CF18600989471 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		236F6FA5280CF26C00989471 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +83,7 @@
 				23E1E3DF27EB81E000BEDFF2 /* Main.storyboard */,
 				236F6FA5280CF26C00989471 /* RegisterViewController.swift */,
 				23E1E3DB27EB81E000BEDFF2 /* SceneDelegate.swift */,
-				2302890828163BFE004DF13D /* TableCell.swift */,
-				2302890628163B39004DF13D /* viewTableCell.xib */,
+				2302890828163BFE004DF13D /* TableViewCell.swift */,
 				237E614E27EFB3D500C3F145 /* User.swift */,
 				236F6FAB280D047C00989471 /* Message.swift */,
 				236F6FA3280CF18600989471 /* ValidationService.swift */,
@@ -153,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E1E3E627EB81E000BEDFF2 /* LaunchScreen.storyboard in Resources */,
-				2302890728163B39004DF13D /* viewTableCell.xib in Resources */,
 				23E1E3E327EB81E000BEDFF2 /* Assets.xcassets in Resources */,
 				23E1E3E127EB81E000BEDFF2 /* Main.storyboard in Resources */,
 			);
@@ -173,7 +169,7 @@
 				236F6FA4280CF18600989471 /* ValidationService.swift in Sources */,
 				238CFA902813215200050055 /* InboxViewController.swift in Sources */,
 				237E614F27EFB3D500C3F145 /* User.swift in Sources */,
-				2302890928163BFE004DF13D /* TableCell.swift in Sources */,
+				2302890928163BFE004DF13D /* TableViewCell.swift in Sources */,
 				236F6FA6280CF26C00989471 /* RegisterViewController.swift in Sources */,
 				23E1E3DA27EB81E000BEDFF2 /* AppDelegate.swift in Sources */,
 				23E1E3DC27EB81E000BEDFF2 /* SceneDelegate.swift in Sources */,

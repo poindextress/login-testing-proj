@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelSender: UILabel!
     @IBOutlet weak var labelSubject: UILabel!

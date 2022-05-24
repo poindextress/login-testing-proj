@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JdM-G4-mqs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JdM-G4-mqs">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,6 +130,56 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="opY-xj-nEQ">
                                 <rect key="frame" x="0.0" y="144" width="390" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="Z7k-kt-k9b" customClass="TableViewCell" customModule="login_testing_proj" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z7k-kt-k9b" id="qsU-WQ-nty">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In7-qZ-6cP">
+                                                    <rect key="frame" x="0.0" y="-0.66666666666666607" width="414" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="mut-K5-bWs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfD-z3-R41" userLabel="Label Subject">
+                                                    <rect key="frame" x="0.0" y="27" width="414" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-oe-TKO">
+                                                    <rect key="frame" x="0.0" y="43" width="414" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="In7-qZ-6cP" firstAttribute="trailing" secondItem="JfD-z3-R41" secondAttribute="trailing" id="4Bc-oP-puT"/>
+                                                <constraint firstItem="In7-qZ-6cP" firstAttribute="leading" secondItem="Qio-oe-TKO" secondAttribute="leading" id="9WA-z2-RAO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JfD-z3-R41" secondAttribute="bottom" constant="5" id="EEk-or-Sha"/>
+                                                <constraint firstItem="JfD-z3-R41" firstAttribute="top" secondItem="qsU-WQ-nty" secondAttribute="topMargin" constant="16" id="Pp5-jo-eH2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="In7-qZ-6cP" secondAttribute="trailing" constant="-44" id="ZlW-PT-Onk"/>
+                                                <constraint firstItem="In7-qZ-6cP" firstAttribute="trailing" secondItem="Qio-oe-TKO" secondAttribute="trailing" id="bvU-Qc-1rB"/>
+                                                <constraint firstItem="In7-qZ-6cP" firstAttribute="top" secondItem="qsU-WQ-nty" secondAttribute="topMargin" constant="-11.666666030883789" id="dY3-dZ-837"/>
+                                                <constraint firstItem="In7-qZ-6cP" firstAttribute="leading" secondItem="qsU-WQ-nty" secondAttribute="leadingMargin" constant="-20" id="f45-2h-VUG"/>
+                                                <constraint firstItem="In7-qZ-6cP" firstAttribute="leading" secondItem="JfD-z3-R41" secondAttribute="leading" id="hSM-FF-kz7"/>
+                                                <constraint firstItem="Qio-oe-TKO" firstAttribute="top" secondItem="In7-qZ-6cP" secondAttribute="bottom" constant="13.666666030883789" id="nzb-9I-dPx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelBody" destination="Qio-oe-TKO" id="mgP-aF-obg"/>
+                                            <outlet property="labelSender" destination="In7-qZ-6cP" id="jHL-id-9XF"/>
+                                            <outlet property="labelSubject" destination="JfD-z3-R41" id="I51-gt-Ao2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="1Iz-Z5-uYF" id="czS-gx-LrA"/>
                                 </connections>
